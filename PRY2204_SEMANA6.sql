@@ -195,9 +195,9 @@ ALTER TABLE pago
 DROP COLUMN metodo_pago;
 
 ALTER TABLE pago
-ADD id_metodo_pago NUMBER(1) NOT NULL
+ADD (id_metodo_pago NUMBER(1) NOT NULL,
 ADD CONSTRAINT pago_metodo_chk
-CHECK (id_metodo_pago IN (1,2,3));
+CHECK (id_metodo_pago IN (1,2,3)));
 
 ---==AGREGAR FECHA_NACIMIENTO==---
 ALTER TABLE paciente
